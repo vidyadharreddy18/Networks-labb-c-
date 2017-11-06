@@ -1,0 +1,87 @@
+#include <iostream>
+ using namespace std;
+ class forLoop
+ {
+  public:
+  int length,coef=1,space,i,j;
+  void print()
+ {
+   cout << "The output of for loop is:"<< endl;
+   for(i=0;i<length;i++)
+ {
+   for(space=1;space<=length-i;space++)
+   cout << "  ";
+   for(j=0;j<=i;j++)
+ {
+    if (j==0||i==0)
+    coef=1;
+    else
+    coef=coef*(i-j+1)/j;
+    cout << "   " <<  coef;
+ }
+    cout << endl;
+ }
+ }
+ };
+    class whileLoop
+ {
+    public:
+    int num;
+    void print()
+ {
+    cout << "The output of while loop is:";
+    int factorial=1;
+    cout << endl;
+    int i=1;
+    while(i<=num)
+ {
+    factorial=factorial*i;
+    ++i;
+ }
+   cout<<"Factorial of Given Number is="<<factorial<<endl;
+ }
+ };
+    class doWhileLoop
+ {
+    public:
+    int length;
+    void print()
+ {
+    cout << "The output of do while loop is:";
+    int count_1=0;
+    do
+ {
+    if(count_1%2==0)
+    cout<<"  "<<count_1;
+    count_1++;
+ }
+    while(count_1<=length);
+ }
+ };
+    int main()
+ {
+    int length;
+    cout << "Enter the length of loop: ";
+    cin >> length;
+    cout << "Pascal triangle:" << endl;
+    forLoop var1;
+    var1.length=length;
+    var1.print();
+    cout << endl;
+    int num;
+    cout<<" Enter Number To Find Its Factorial:  ";
+    cin >> num;
+    whileLoop var2;
+    var2.num = num;
+    var2.print();
+    cout << endl;
+    cout<<"Even numbers: "<< endl;
+    int length1;
+    cout << "Enter the length of loop: ";
+    cin >> length1;
+    doWhileLoop var3;
+    var3.length = length1;
+    var3.print();
+    cout << endl;
+    return 0;
+ }
