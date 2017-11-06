@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+class Details
+{
+public:
+char CollegeName[25];
+int currentyear;
+};
+class student_details : public Details
+{
+ char Name[20];
+ char Roll[10];
+ char Subject[10];
+ float marks;
+ public:
+
+void StudentData()
+{
+cout<<"\n Enter college name and Current year:";
+cin>>CollegeName;
+cout<<"\n";
+cin>>currentyear;
+cout<<"\n Enter your name, Roll,Subject,marks:";
+cin>>Name;
+cout<<"\n";
+cin>>Roll;
+cout<<"\n";
+cin>>Subject;
+cout<<"\n";
+cin>>marks;
+}
+ void Showdata()
+ {
+ cout<<"\n College:"<<CollegeName<<"\n year:"<<currentyear<<"\n Name:"<<Name;
+ cout<<"\n Roll:"<<Roll<<"\n Subject:"<<Subject<<"\n Marks:"<<marks;
+ }
+
+};
+int main()
+{
+
+student_details a;
+a.StudentData();
+a.Showdata();
+return 0;
+}
